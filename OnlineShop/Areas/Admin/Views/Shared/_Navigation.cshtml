@@ -1,0 +1,12 @@
+﻿
+<li>
+    @using (Html.BeginForm())
+    {
+        @Html.Hidden("returnUrl", Request.RawUrl)
+        @Html.DropDownList("ddlCulture", new SelectList(new[] {
+            new {value="vi",text=StaticResources.Properties.Resources.Vietnamese},
+            new {value = "en",text=StaticResources.Properties.Resources.English}
+        }, "value", "text"));
+    }
+</li>
+
